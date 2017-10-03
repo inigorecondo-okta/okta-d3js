@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Okta Sign-in && Register</title>
+    <meta name="description" content="">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" >
+    
+    <style>
+        .node {
+            cursor: pointer;
+        }
+
+        .overlay {
+            background-color: #EEE;
+        }
+
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 1.5px;
+        }
+
+        .node text {
+            font-size: 10px;
+            font-family: sans-serif;
+        }
+
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 1.5px;
+        }
+
+        .templink {
+            fill: none;
+            stroke: red;
+            stroke-width: 3px;
+        }
+
+        .ghostCircle.show {
+            display: block;
+        }
+
+        .ghostCircle, .activeDrag .ghostCircle {
+            display: none;
+        }
+
+        .div_background {
+            background-color: #017DC1;
+        }
+
+
+        button {
+            border-radius: 3px;
+            border: none;
+            padding: 6px 12px;
+            font-size: 1em;
+        }
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,700' type='text/css'>
+    
+    <!-- D3.js -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <!-- App Script -->
+    <script type="text/javascript" src="/js/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/timodal.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/timodal.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/highlight.min.js"></script>
+    <script data-main="js/app" src="js/require.js"></script>
+
+</head>
+<body>
+        <div class="div_background">
+            <div>
+                <h2><font color="#fff">Okta Users and Groups</font></h2>
+            </div>
+
+            <table>
+                <tr>
+                    <td>
+                        <div>                                            
+                            <input id="btn-display-users" type="button" value="Display Users">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <input id="btn-expand-all" type="button" value="Expand All">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <input id="btn-collapse-all" type="button" value="Collapse All">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <input id="show-form-modal" type="button" value="Form Modal" >
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="tree-container"></div>
+
+        <script type="text" id="form-modal">
+            <div class="popup-wrapper" style="min-width: 400px;">
+                <div id="title_form" class="popup-header"> User</div>
+                <div class="popup-content">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" id="email" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" id="password" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn-success" style="width: 100%;">Register</button>
+                    </div>
+                </div>
+            </div>
+        </script>
+</body>
+</html>
