@@ -1,5 +1,5 @@
 # okta-d3js
-Display Okta Users, Groups and Applications using D3js - Click on application links and access them via SSO
+Display Okta Users, Groups and Applications using D3js - SSO by clicking on application links
 
 ![Alt Text](https://j.gifs.com/Oyl2lG.gif)
 
