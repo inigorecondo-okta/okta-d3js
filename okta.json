@@ -1,8 +1,6 @@
 {
   "name": "okta-d3js",
   "description": "Displaying Okta Users, Groups and Applications using D3js.",
-  "url": "",
-  "logo": "",
   "categories": [
     "user-management",
     "sso"
